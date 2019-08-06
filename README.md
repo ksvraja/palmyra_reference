@@ -22,9 +22,9 @@ GET - /Users  also can be used to search records by providing attributes in the 
 
 #### Samples
 
-[Query](DML/query)
+[Query](DML/query.md)
 
-[Mutation](DML/mutation)
+[Mutation](DML/mutation.md)
 
 
 
@@ -64,7 +64,7 @@ These errors occur due to server failures or issues with the underlying infrastr
 
 The developer can create tables using their prefered database client such as heidisql or mysql workbench.
 
-The tables should be created with proper primary key, foreign key references. It is recommended to have auto-increment primary keys. For more information refer to the [Concepts](Concepts) guide. 
+The tables should be created with proper primary key, foreign key references. It is recommended to have auto-increment primary keys. For more information refer to the [Concepts](Concepts.md) guide. 
 
 After creating the tables, invoke the db synchronization action by the URL 
 
