@@ -78,3 +78,25 @@ On successful synchronization 200 response code will be received.
 
 
 After synchronization, the configuration tables (zit_xxx) will be populated with schema metadata. The administrator can modify the field  'zit_ci_type.name'  to change the type name. similarly 'zit_ci_fields.attribute' field can be modified to change the field names of the generated types. 
+
+
+
+All the tables can be viewed in the below endpoint 
+
+```
+URL - http://{host}/palmyra/v1/{database}/type
+Method - post
+```
+
+
+
+The table details can be viewed in the below endpoint 
+
+```
+URL - http://{host}/palmyra/v1/{database}/type/{type}
+Method - post
+```
+
+
+
+Sample URL - http://{host}/palmyra/v1/{database}/type/country
