@@ -1,0 +1,14 @@
+site_name: Palmyra
+theme:
+        name: 'material'
+nav:
+        - Home: index.md
+        - Concepts : 
+                - Data Model : concepts/datamodel.md
+        - REST API Guide : 
+                - Query : rest_ref/query.md
+                - Mutation : rest_ref/mutation.md
+        - Customization: 
+                - CRUD LifeCycle : dev_ref/lifecycle.md
+                - Groovy : dev_ref/groovy.md
+                - Action : dev_ref/action.md
