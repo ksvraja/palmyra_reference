@@ -1,6 +1,6 @@
 site_name: Palmyra
 theme:
-        name: 'material'
+        name: 'readthedocs'
 nav:
         - Home: index.md
         - Concepts : 
