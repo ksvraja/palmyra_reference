@@ -3,7 +3,7 @@ theme:
         name: 'readthedocs'
 nav:
         - Getting Started : index.md
-        - CRUD Reference : crud.md 
+        - CRUD Reference : concepts/crud.md 
         - Data Model : concepts/datamodel.md
         - REST API : 
                 - Query : rest_ref/query.md
