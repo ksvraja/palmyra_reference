@@ -1,12 +1,9 @@
-Welcome to the palmyra wiki!
-
-
-
-## Developer Reference
-
 #### REST API - CRUDS  reference
 
 Resource vs HTTP Methods
+Base url - http://localhost:8080/palmyra/{database}/
+
+Assuming the table name is - `Users`
 
 | Resource         | GET                                  | POST                                       | PUT                             | DELETE                   |
 | ---------------- | ------------------------------------ | ------------------------------------------ | ------------------------------- | ------------------------ |
@@ -14,33 +11,27 @@ Resource vs HTTP Methods
 | /data/Users/123  | Return specific user with all fields | Method not allowed (405)                   | Update specific user            | Delete specific user     |
 | /query/Users     | Method not allowed (405)             | Return list of users with specified fields | Method not allowed (405)        | Method not allowed (405) |
 | /query/Users/123 | Method not allowed (405)             | Return specific user with specified fields | Method not allowed (405)        | Method not allowed (405) |
-| /bulk/Users      | Method not allowed (405)             | Create multiple users                      | Create or Update multiple users | Method not allowed (405) |
-
-GET - /Users  also can be used to search records by providing attributes in the URL. But this will be a limited search functionality. flexible query options are as provided with the /query/Users.
 
 
+**Samples**
 
-#### Samples
+[Query](../rest_ref/query.md)
 
-[Query](DML/query.md)
-
-[Mutation](DML/mutation.md)
+[Mutation](../rest_ref/mutation.md)
 
 
 
-### Standard HTTP codes 
+### HTTP Response codes 
 
-##### 2xx Success
+**2xx Success**
 
 200 OK: Returned by a successful GET, PUT, POST or DELETE operation.
 
 201 Created: Response for a successful resource creation by a POST request.
 
-3xx Redirection
+204 No content: Response for No data while searching for single item by Unique Key
 
-304 Not Modified: 
-
-##### 4xx Client Errors
+**4xx Client Errors**
 
 400 Bad Request: When an HTTP request body can’t be parsed. For example, if an API is expecting a body in a JSON format for a POST request, but the body of the request is malformed.
 
@@ -52,19 +43,16 @@ GET - /Users  also can be used to search records by providing attributes in the 
 
 405 Method Not Allowed: If the user is trying to violate an API contract, for example, trying to update a resource by using a POST method.
 
-##### 5xx Server Errors
+**5xx Server Errors**
 
 These errors occur due to server failures or issues with the underlying infrastructure.
 
 
-
-## Admin Reference
-
-#### REST API - CRUDS  reference
+#### REST API - System Configuration
 
 The developer can create tables using their prefered database client such as heidisql or mysql workbench.
 
-The tables should be created with proper primary key, foreign key references. It is recommended to have auto-increment primary keys. For more information refer to the [Concepts](Concepts.md) guide. 
+The tables should be created with proper primary key, foreign key references. It is recommended to have auto-increment primary keys. For more information refer to the [Data Model](datamodel.md) guide. 
 
 After creating the tables, invoke the db synchronization action by the URL 
 

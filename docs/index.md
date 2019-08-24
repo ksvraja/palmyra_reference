@@ -1,35 +1,29 @@
-# palmyra
-Palmyra provides Instant JSON REST API to access the data in the MySQL database. It automates the task of CRUD operations, while freeing the developer from Database transactions, concurrency, basic validations etc., 
+# Palmyra
+**Instant JSON REST API** from your database.
 
-Added with the power of groovy scripting, the developer can also add business rules while performing CRUD operations.
+Using Palmyra the developers can
 
+* Instantly provide REST API to manage your application data. 
+* Publish the API changes based on data model changes immediately
+* Perform custom actions during CRUD operations with Groovy Scripting
+* Fast-track your development (especially nodejs with rdbms)
 
-## Pre-requisites 
-* MariaDB 10.2 / MySQL server 
-* Java 8 
-
-## Installation 
-Download the packaged release file from release section. Extract the zip file in the local folder. The extracted files should contain the folders/files as below.
-
-* start_palmyra.bat/sh -   Executes java command to start the server
-* resources – contains the database configuration file – spring.properties
-* palmyra – contains the application war and server runtime (jetty)
-* mysql – contains the SQL scripts for database setup.
+  
+#### how it works 
+[watch in youtube](https://youtu.be/XHFvbeP-KeY)  
+[Quick Start here](quick_start.md)
 
 
+#### Idea behind
+Any modern (modular) application development, has to provide standard interfaces to interact.   
 
-Step 1 - Initializing the database.   
-The developer can setup a sample database, using – ‘mysql/SampleDB.sql’. or
-Add Palmyra base tables to your existing schema using ‘mysql/create_base_tables.sql’
+* Why not develop a system, takes input with json and manages all the database operations. 
 
-Step2 – Configure the connection parameters.  
-	Specify the database IP, user, password and schema details in the file 
-‘resources/spring.properties’
+* Keep it real simple - Abstracting data model and keeps away from complex ORM technologies.
 
-Step3 – Start the server  
- Windows - execute the command ‘start_palmyra.bat’.  
-for Linux -  execute the command ‘start_palmyra.sh’. 
+* Easily Extensible for the developers.
 
-Step4 – synchronize the server with your database  
- http://localhost:8080/palmyra/v1/palmyra/dev/db/sync  
-if you have provided a different schema name other than ‘palmyra’, change the URL as below.  http://localhost:8080/palmyra/v1/{schema}/dev/db/sync	
+#### Technology behind
+[Jetty Server](http://www.eclipse.org/jetty/)  
+[Sql2O](https://www.sql2o.org/)  
+[Groovy](https://groovy-lang.org/)

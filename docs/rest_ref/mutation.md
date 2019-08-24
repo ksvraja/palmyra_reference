@@ -1,8 +1,7 @@
-# Mutation
 
-## Create a new record
+## Create new record
 
-##### creating individual record
+**creating individual record**
 
 ```
 endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}
@@ -43,8 +42,7 @@ response format will be as below providing all the attributes of the given type.
 
 
 
-
-##### Creating record with relations
+**Creating record with relations**
 
 While creating a record, the children of the record also can be created on the same request. 
 
@@ -99,9 +97,9 @@ response format will be as below providing all the attributes of the given type.
 
 
 
-## Update existing record
+## Update record
 
-##### updating individual record
+**update single record**
 
 ```
 endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}/20
@@ -143,7 +141,7 @@ if the record is not found, http status code - 404 will be returned
 
 
 
-##### Updating record with relations
+**Update record and relations**
 
 While Updating a record, the child records also can be created, updated or deleted on the same request. 
 
@@ -203,9 +201,9 @@ response format will be as below providing all the attributes of the given type.
 
 
 
-## Delete an existing record
+## Delete record
 
-##### Delete a single record by id
+**Delete single record by id**
 
 ```
 endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}/20
@@ -226,7 +224,7 @@ if the record has child records, the record will not be deleted and will return 
 
 
 
-##### Deleting record with children
+**Delete record with children**
 
 To delete a record with children, provide the meta information as below.
 

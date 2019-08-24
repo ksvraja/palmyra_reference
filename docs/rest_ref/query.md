@@ -1,4 +1,6 @@
-## Query for the data
+## Query Options
+
+
 
 ```
 endpoint 	- https://{server-url}:8080/palmyora/{database}/query/{type}
@@ -73,7 +75,7 @@ The response data will be provided as below.
 
 
 
-## Get the result data as List
+## Result as List
 
 If the data should be retrieved as List of Tuples and does not require the above structure, query the data with the URL  as below. (adding 'list' to the URL) 
 ```
@@ -114,7 +116,7 @@ If no data found matching the criteria.  an empty array will be returned.
 
 
 
-## Query for the Single record
+## By Primary Key
 
 ```
 endpoint 	- https://{server-url}:8080/palmyora/{database}/query/{type}/{id}
@@ -155,62 +157,37 @@ The response data will be provided as below.
 
 
 
-## Query with GET method
+## By Unique Key
 
-##### Read - Get single record by known id
+
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}/{id}
-method 		- GET
-```
-
-type - table or pre-defined object to be queried
-id - the identifier (primary key) of the record.
-
-response format will be as below providing all the fields of the given type.
-
-```json
-{
-	"name" : "selvi",
-	"dob" : "18-02-2000",
-	"join_date" : "18-02-2018", 
-    "father" : "madhan",
-    "city" : "chennai"
-}
-```
-
-if the record is not found, http status code - 404 will be returned
-
-
-
-##### Read - Get single record by known id with specific fields
-
-```
-endpoint 	- https://{serverurl}:8080/palmyora/{database}/data/{type}/{id}/fields
+endpoint 	- https://{server-url}:8080/palmyora/{database}/query/{type}/unique
 method 		- POST
 ```
 
-id - the identifier (primary key) of the record.
+type - table or pre-defined object to be queried 
+
+
 
 Request Body
 
 ```json
 {
- 	"fields" : [ "name", "dob", "join_date" ]
+    "fields" : [ "name", "dob", "join_date" ],
+	"criteria" : {
+		"code" : "PT0032"
+	}
 }
 ```
 
 
-
-response format will be as below providing all the fields of the given type.
+The response data will be provided as below. 
 
 ```json
 {
-	"name" : "selvi",
+	"name" : "senthil",
 	"dob" : "18-02-2000",
 	"join_date" : "18-02-2018"
 }
 ```
-
-
-

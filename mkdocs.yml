@@ -2,13 +2,14 @@ site_name: Palmyra
 theme:
         name: 'readthedocs'
 nav:
-        - Getting Started : index.md
+        - Introduction : index.md
+        - Quick Start : quick_start.md
         - CRUD Reference : concepts/crud.md 
         - Data Model : concepts/datamodel.md
         - REST API : 
                 - Query : rest_ref/query.md
                 - Mutation : rest_ref/mutation.md
-        - LifeCycle : 
-                - Events : dev_ref/lifecycle.md
+        - Customization : 
+                - LifeCycle : dev_ref/lifecycle.md
                 - Groovy : dev_ref/groovy.md
                 - Action : dev_ref/action.md
