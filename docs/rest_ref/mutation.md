@@ -4,7 +4,7 @@
 **creating individual record**
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/data/{type}
 method 		- POST
 ```
 
@@ -49,7 +49,7 @@ While creating a record, the children of the record also can be created on the s
 Along with the fields of the record, provide the child records as below (as Array).
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/data/{type}
 method 		- POST
 ```
 
@@ -102,7 +102,7 @@ response format will be as below providing all the attributes of the given type.
 **update single record**
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}/20
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/data/{type}/20
 method 		- PUT
 ```
 
@@ -206,7 +206,7 @@ response format will be as below providing all the attributes of the given type.
 **Delete single record by id**
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/data/{type}/20
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/data/{type}/20
 method 		- DELETE
 ```
 

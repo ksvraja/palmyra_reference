@@ -3,7 +3,7 @@
 
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/query/{type}
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/query/{type}
 method 		- POST
 ```
 
@@ -79,7 +79,7 @@ The response data will be provided as below.
 
 If the data should be retrieved as List of Tuples and does not require the above structure, query the data with the URL  as below. (adding 'list' to the URL) 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/query/{type}/list
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/query/{type}/list
 method 		- POST
 ```
 
@@ -119,7 +119,7 @@ If no data found matching the criteria.  an empty array will be returned.
 ## By Primary Key
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/query/{type}/{id}
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/query/{type}/{id}
 method 		- POST
 ```
 
@@ -162,7 +162,7 @@ The response data will be provided as below.
 
 
 ```
-endpoint 	- https://{server-url}:8080/palmyora/{database}/query/{type}/unique
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/query/{type}/unique
 method 		- POST
 ```
 
@@ -191,3 +191,38 @@ The response data will be provided as below.
 	"join_date" : "18-02-2018"
 }
 ```
+
+
+
+## Get First Record
+
+
+
+```
+endpoint 	- https://{server-url}/palmyra/api/v1/{database}/query/{type}/first
+method 		- POST
+```
+
+type - table or pre-defined object to be queried 
+
+
+
+Request Body
+
+```json
+{
+    "fields" : [ "name", "dob", "join_date" ],
+}
+```
+
+
+The response data will be provided as below. 
+
+```json
+{
+	"name" : "senthil",
+	"dob" : "18-02-2000",
+	"join_date" : "18-02-2018"
+}
+```
+

@@ -6,7 +6,7 @@ Using Palmyra the developers can
 * Instantly provide REST API to manage your application data. 
 * Publish the API changes based on data model changes immediately
 * Perform custom actions during CRUD operations with Groovy Scripting
-* Fast-track your development (especially nodejs with rdbms)
+* Fast-track your development (node with RDBMS)
 
   
 #### how it works 
